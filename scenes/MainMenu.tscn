@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://cf5f1afwotgd"]
+
+[ext_resource type="Script" uid="uid://c2820fk5q0h0q" path="res://scripts/MainMenu.gd" id="1_yqorp"]
+[ext_resource type="Texture2D" uid="uid://0r7w2taejcb3" path="res://assets/character/adventure_girl/png/Jump (9).png" id="2_0ykhv"]
+[ext_resource type="FontFile" uid="uid://egapgyixi64w" path="res://assets/font/JungleAdventurer.otf" id="2_ow34m"]
+[ext_resource type="FontFile" uid="uid://cmwg3h72f04g0" path="res://assets/font/subtitle/MotionControl-Bold.otf" id="3_l72w3"]
+[ext_resource type="Texture2D" uid="uid://dod2g1h0crecn" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Ground 43.png" id="3_ucygd"]
+[ext_resource type="Texture2D" uid="uid://ctety3ugytmpn" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Bushes Medium.png" id="5_826wr"]
+[ext_resource type="Texture2D" uid="uid://riljspsxc1s0" path="res://assets/ui/mainmenu_button.png" id="6_7la6k"]
+[ext_resource type="Texture2D" uid="uid://b5qnamwo8pvu5" path="res://assets/tilemap/simple-summer/summer.png" id="6_ucygd"]
+[ext_resource type="Texture2D" uid="uid://chke8gbi5rkh5" path="res://assets/ui/mainmenu_button_hover.png" id="7_2nypq"]
+[ext_resource type="Texture2D" uid="uid://c55jjg2x8aop1" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Castle Square.png" id="9_2nypq"]
+[ext_resource type="Texture2D" uid="uid://c0jri2fnxtn7e" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_prop - Tree Large.png" id="10_bky6r"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ucygd"]
+texture = ExtResource("6_ucygd")
+margins = Vector2i(283, 34)
+separation = Vector2i(1, 1)
+texture_region_size = Vector2i(128, 128)
+8:5/0 = 0
+7:5/0 = 0
+6:5/0 = 0
+5:5/0 = 0
+4:5/0 = 0
+3:5/0 = 0
+2:5/0 = 0
+1:5/0 = 0
+0:5/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+8:3/0 = 0
+8:2/0 = 0
+8:1/0 = 0
+8:0/0 = 0
+7:0/0 = 0
+6:0/0 = 0
+5:0/0 = 0
+4:0/0 = 0
+3:0/0 = 0
+2:0/0 = 0
+1:0/0 = 0
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+7:2/0 = 0
+7:1/0 = 0
+6:1/0 = 0
+4:1/0 = 0
+3:1/0 = 0
+2:1/0 = 0
+1:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:2/0 = 0
+5:2/0 = 0
+4:2/0 = 0
+5:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mipys"]
+texture = ExtResource("3_ucygd")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8a8k8"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_ucygd")
+sources/1 = SubResource("TileSetAtlasSource_mipys")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l4mxc"]
+texture = ExtResource("6_7la6k")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7la6k"]
+texture = ExtResource("7_2nypq")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+modulate_color = Color(0.37141973, 0.5709839, 0.22341508, 1)
+
+[node name="MainMenu" type="Control" unique_id=2027808707]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqorp")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=82792972]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9098039, 0.7254902, 0.4509804, 1)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1727915155]
+tile_set = SubResource("TileSet_8a8k8")
+format = 2
+layer_0/tile_data = PackedInt32Array(131080, 131072, 1, 196616, 131072, 1, 262152, 131072, 2, 65544, 131072, 1, 8, 131072, 0, 7, 65536, 0, 6, 65536, 0, 5, 65536, 0, 65542, 65537, 0, 65543, 65537, 0, 65541, 65537, 0, 131079, 65537, 0, 196615, 65537, 0, 196614, 65537, 0, 196613, 65537, 0, 131077, 65537, 0, 131078, 65537, 0, 262151, 65536, 2, 262150, 65536, 2, 262149, 65536, 2, 262148, 65536, 2, 262147, 65536, 2, 262146, 65536, 2, 262145, 65536, 2, 262144, 0, 2, 196608, 0, 1, 131072, 0, 1, 65536, 0, 1, 0, 0, 0, 1, 65536, 0, 2, 65536, 0, 3, 65536, 0, 4, 65536, 0, 65537, 65537, 1, 131073, 65537, 1, 196609, 65537, 1, 196610, 65537, 1, 196611, 65537, 1, 196612, 65537, 1, 131076, 65537, 1, 65540, 65537, 1, 65539, 65537, 1, 65538, 65537, 1, 131074, 65537, 1, 131075, 65537, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1362901005]
+layout_mode = 1
+offset_left = 143.0
+offset_top = 197.0
+offset_right = 718.0
+offset_bottom = 313.0
+theme_override_colors/font_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.8352941, 0.30980393, 1)
+theme_override_fonts/font = ExtResource("2_ow34m")
+theme_override_font_sizes/font_size = 110
+text = "Arden's Oath"
+
+[node name="Quit" type="Button" parent="." unique_id=1440697658]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 394.0
+offset_right = 559.0
+offset_bottom = 453.0
+theme_override_colors/font_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+theme_override_fonts/font = ExtResource("3_l72w3")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_l4mxc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7la6k")
+text = "Quit"
+
+[node name="Play" type="Button" parent="." unique_id=528333007]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 325.0
+offset_right = 561.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+theme_override_fonts/font = ExtResource("3_l72w3")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_l4mxc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7la6k")
+text = "Play Game"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=399434771]
+visible = false
+position = Vector2(105, 111)
+scale = Vector2(0.9083331, 0.7964287)
+texture = ExtResource("5_826wr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=628611742]
+position = Vector2(942.9999, 269)
+scale = Vector2(0.5493055, 0.4966072)
+texture = ExtResource("9_2nypq")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1020010158]
+layout_mode = 0
+offset_left = 626.0
+offset_top = 165.0
+offset_right = 1269.3333
+offset_bottom = 707.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_0ykhv")
+flip_h = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="TextureRect" unique_id=382695367]
+position = Vector2(624.99994, 302.00006)
+scale = Vector2(0.5663191, 0.6016865)
+texture = ExtResource("10_bky6r")
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cwkgbsc3sgk2h"]
+
+[ext_resource type="Script" uid="uid://bnqh44r6b3rce" path="res://scripts/Projectile.gd" id="1_68502"]
+[ext_resource type="Texture2D" uid="uid://cqfx5u7u0g8o3" path="res://assets/inventory/bullet.png" id="2_yg4wg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yg4wg"]
+size = Vector2(21, 36)
+
+[node name="Projectile" type="Area2D" unique_id=225132199]
+script = ExtResource("1_68502")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1453756832]
+position = Vector2(-2.5, -1)
+shape = SubResource("RectangleShape2D_yg4wg")
+
+[node name="bullet" type="Sprite2D" parent="." unique_id=1780592757]
+position = Vector2(1.4139624, -0.679055)
+scale = Vector2(0.049259994, 0.07674399)
+texture = ExtResource("2_yg4wg")
+
+[node name="bullet2" type="Sprite2D" parent="." unique_id=1762568973]
+position = Vector2(-3.9999995, 10.999999)
+scale = Vector2(0.049259994, 0.07674399)
+texture = ExtResource("2_yg4wg")
+
+[node name="bullet3" type="Sprite2D" parent="." unique_id=2054182220]
+position = Vector2(-4.9999995, -12.999999)
+scale = Vector2(0.049259994, 0.07674399)
+texture = ExtResource("2_yg4wg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,311 @@
+[gd_scene format=4 uid="uid://dmrygysafmfxw"]
+
+[ext_resource type="Script" uid="uid://dgckcqs1cxbto" path="res://scenes/Level1/LevelBgm.gd" id="1_j5lb4"]
+[ext_resource type="Texture2D" uid="uid://chnsaxvnygmqt" path="res://assets/tilemap/kenney_top-down-tanks/Spritesheet/sheet_tanks.png" id="1_j8mhj"]
+[ext_resource type="PackedScene" uid="uid://cpidjq250j5a6" path="res://scenes/Level1/Player.tscn" id="2_rv6uj"]
+[ext_resource type="Script" uid="uid://bridw6pr7rwae" path="res://scripts/ToArena.gd" id="3_wnea0"]
+[ext_resource type="Texture2D" uid="uid://dhiro58pk7fm3" path="res://assets/tilemap/kenney_village/PNG/Default size/Environment/medievalEnvironment_04.png" id="3_xamxr"]
+[ext_resource type="Texture2D" uid="uid://kl4ud48drv8k" path="res://assets/tilemap/kenney_village/PNG/Retina/Environment/medievalEnvironment_01.png" id="4_cnk32"]
+[ext_resource type="Texture2D" uid="uid://ei77mttujefd" path="res://assets/tilemap/kenney_village/PNG/Retina/Environment/medievalEnvironment_14.png" id="5_3bmrq"]
+[ext_resource type="Texture2D" uid="uid://cq4d01f8dh1ba" path="res://assets/tilemap/kenney_village/PNG/Default size/Environment/medievalEnvironment_20.png" id="6_oey0f"]
+[ext_resource type="Texture2D" uid="uid://bspjg5y7v8xqo" path="res://assets/tilemap/kenney_village/PNG/Retina/Environment/medievalEnvironment_05.png" id="7_oey0f"]
+[ext_resource type="Texture2D" uid="uid://nqy5iieavcfb" path="res://assets/tilemap/kenney_village/PNG/Retina/Environment/medievalEnvironment_16.png" id="8_asd4u"]
+[ext_resource type="Texture2D" uid="uid://8krmcp56khs3" path="res://assets/tilemap/kenney_village/PNG/Retina/Environment/medievalEnvironment_12.png" id="9_wnea0"]
+[ext_resource type="Texture2D" uid="uid://djfy6oooihf5j" path="res://assets/tilemap/kenney_village/Sign - Crown Village.png" id="10_asd4u"]
+[ext_resource type="Script" uid="uid://c4rsmvvev4int" path="res://scripts/Sword-1.gd" id="12_7y2jr"]
+[ext_resource type="Texture2D" uid="uid://bvlw86lbl0ixe" path="res://assets/inventory/pistol.png" id="13_vluem"]
+[ext_resource type="Script" uid="uid://b4n0pdcqt5l24" path="res://scripts/InventoryPanel.gd" id="14_l2wtb"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rv6uj"]
+texture = ExtResource("1_j8mhj")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+0:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4mhsf"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_rv6uj")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rv6uj"]
+size = Vector2(30, 141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7y2jr"]
+size = Vector2(43.170322, 24.577318)
+
+[node name="Forest1" type="Node2D" unique_id=1325318042]
+script = ExtResource("1_j5lb4")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1757960981]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAEAAAABAAAAAAAAAAEAAAACAAAAAAAAAAEAAAADAAAAAAAAAAEAAAAEAAAAAAAAAAEAAAAFAAAAAAAAAAEAAAAGAAAAAAAAAAEAAAAHAAAAAAAAAAEAAAAIAAAAAAAAAAEAAAAIAAEAAAAAAAEAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAAHAAQAAAAAAAEAAAAGAAQAAAAAAAEAAAAFAAQAAAAAAAEAAAAEAAQAAAAAAAEAAAADAAQAAAAAAAAAAAACAAQAAAAAAAEAAAABAAQAAAAAAAEAAAAAAAQAAAAAAAEAAAAAAAMAAAAAAAEAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAEAAAABAAIAAAAAAAAAAAABAAMAAAAAAAEAAAABAAEAAAAAAAEAAAACAAEAAAAAAAEAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAEAAAAAAAEAAAADAAEAAAAAAAEAAAACAAIAAAAAAAAAAAACAAMAAAAAAAEAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAEAAAAFAAEAAAAAAAEAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAEAAAAGAAMAAAAAAAAAAAAGAAIAAAAAAAAAAAAHAAEAAAAAAAEAAAAHAAMAAAAAAAAAAAAGAAEAAAAAAAEAAAAJAAAAAAAAAAEAAAAJAAEAAAAAAAEAAAAKAAEAAAAAAAAAAAALAAAAAAAAAAEAAAAMAAAAAAAAAAEAAAANAAAAAAAAAAEAAAANAAEAAAAAAAEAAAAMAAEAAAAAAAAAAAALAAEAAAAAAAAAAAAKAAAAAAAAAAEAAAAJAAMAAAAAAAAAAAAKAAMAAAAAAAAAAAALAAMAAAAAAAAAAAAMAAMAAAAAAAAAAAANAAMAAAAAAAAAAAANAAQAAAAAAAEAAAAMAAQAAAAAAAEAAAALAAQAAAAAAAEAAAAKAAQAAAAAAAEAAAAJAAQAAAAAAAEAAAAKAAIAAAAAAAAAAAAJAAIAAAAAAAEAAAAIAAIAAAAAAAEAAAAHAAIAAAAAAAEAAAALAAIAAAAAAAEAAAAMAAIAAAAAAAEAAAANAAIAAAAAAAEAAAAOAAMAAAAAAAAAAAAOAAIAAAAAAAAAAAAPAAIAAAAAAAAAAAAQAAIAAAAAAAAAAAARAAIAAAAAAAAAAAAQAAMAAAAAAAAAAAAQAAQAAAAAAAAAAAAQAAUAAAAAAAAAAAAPAAUAAAAAAAAAAAAPAAMAAAAAAAEAAAAPAAQAAAAAAAEAAAAOAAQAAAAAAAEAAAAOAAUAAAAAAAEAAAANAAUAAAAAAAEAAAAMAAUAAAAAAAEAAAALAAUAAAAAAAEAAAAKAAUAAAAAAAEAAAAJAAUAAAAAAAEAAAAIAAUAAAAAAAAAAAAHAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAADAAUAAAAAAAAAAAACAAUAAAAAAAEAAAABAAUAAAAAAAEAAAAAAAUAAAAAAAEAAAAOAAAAAAAAAAEAAAAPAAAAAAAAAAEAAAAQAAAAAAAAAAEAAAARAAAAAAAAAAEAAAARAAEAAAAAAAEAAAAQAAEAAAAAAAEAAAAPAAEAAAAAAAEAAAAOAAEAAAAAAAEAAAAAAP//AAAAAAEAAAABAP//AAAAAAEAAAACAP//AAAAAAEAAAADAP//AAAAAAEAAAAEAP//AAAAAAEAAAAFAP//AAAAAAEAAAAGAP//AAAAAAEAAAALAP//AAAAAAEAAAAMAP//AAAAAAEAAAANAP//AAAAAAEAAAAOAP//AAAAAAEAAAAPAP//AAAAAAEAAAAQAP//AAAAAAEAAAARAP//AAAAAAEAAAAKAP//AAAAAAEAAAAJAP//AAAAAAEAAAAIAP//AAAAAAEAAAAHAP//AAAAAAEAAAARAAMAAAAAAAEAAAARAAQAAAAAAAEAAAARAAUAAAAAAAEAAAASAAUAAAAAAAEAAAASAAQAAAAAAAEAAAASAAMAAAAAAAEAAAASAAEAAAAAAAEAAAASAAAAAAAAAAEAAAASAP//AAAAAAEAAAATAP//AAAAAAEAAAATAAAAAAAAAAEAAAATAAEAAAAAAAEAAAATAAMAAAAAAAEAAAATAAQAAAAAAAEAAAATAAUAAAAAAAEAAAASAAIAAAAAAAAAAAATAAIAAAAAAAAAAAD/////AAAAAAEAAAD+////AAAAAAEAAAD9////AAAAAAEAAAD8////AAAAAAEAAAD//wAAAAAAAAEAAAD+/wAAAAAAAAEAAAD9/wAAAAAAAAEAAAD8/wAAAAAAAAEAAAD//wMAAAAAAAEAAAD+/wMAAAAAAAEAAAD9/wMAAAAAAAEAAAD//wQAAAAAAAEAAAD//wUAAAAAAAEAAAD+/wUAAAAAAAEAAAD9/wUAAAAAAAEAAAD8/wUAAAAAAAEAAAD9/wQAAAAAAAEAAAD+/wQAAAAAAAEAAAD//wIAAAAAAAAAAAD+/wIAAAAAAAAAAAD9/wIAAAAAAAAAAAD8/wEAAAAAAAEAAAD9/wEAAAAAAAEAAAD+/wEAAAAAAAEAAAD//wEAAAAAAAEAAAD8/wIAAAAAAAAAAAD8/wMAAAAAAAEAAAD8/wQAAAAAAAEAAAD7/wEAAAAAAAEAAAD7/wAAAAAAAAEAAAD7////AAAAAAEAAAD7/wMAAAAAAAEAAAD7/wQAAAAAAAEAAAD7/wUAAAAAAAEAAAD7/wIAAAAAAAAAAAD6/wUAAAAAAAEAAAD6/wQAAAAAAAEAAAD6/wMAAAAAAAEAAAD6/wIAAAAAAAAAAAD6/wEAAAAAAAAAAAD5/wEAAAAAAAAAAAD4/wEAAAAAAAAAAAD5/wMAAAAAAAEAAAD5/wIAAAAAAAEAAAD5/wQAAAAAAAEAAAD5/wUAAAAAAAEAAAD6/wAAAAAAAAEAAAD6////AAAAAAEAAAD5////AAAAAAEAAAD5/wAAAAAAAAEAAAD4/wIAAAAAAAEAAAD4/wMAAAAAAAEAAAD4/wQAAAAAAAEAAAD4/wUAAAAAAAEAAAD4/wAAAAAAAAEAAAD4////AAAAAAEAAAD4//7/AAAAAAEAAAD5//7/AAAAAAEAAAD6//7/AAAAAAEAAAD7//7/AAAAAAEAAAD8//7/AAAAAAEAAAD9//7/AAAAAAEAAAD+//7/AAAAAAEAAAD///7/AAAAAAEAAAAAAP7/AAAAAAEAAAABAP7/AAAAAAEAAAACAP7/AAAAAAEAAAADAP7/AAAAAAEAAAAEAP7/AAAAAAEAAAAFAP7/AAAAAAEAAAAGAP7/AAAAAAEAAAAHAP7/AAAAAAEAAAAIAP7/AAAAAAEAAAAJAP7/AAAAAAEAAAAKAP7/AAAAAAEAAAALAP7/AAAAAAEAAAAMAP7/AAAAAAEAAAANAP7/AAAAAAEAAAAOAP7/AAAAAAEAAAAPAP7/AAAAAAEAAAAQAP7/AAAAAAEAAAARAP7/AAAAAAEAAAASAP7/AAAAAAEAAAATAP7/AAAAAAEAAAD4/wYAAAAAAAEAAAD5/wYAAAAAAAEAAAD6/wYAAAAAAAEAAAD7/wYAAAAAAAEAAAD8/wYAAAAAAAEAAAD9/wYAAAAAAAEAAAD+/wYAAAAAAAEAAAD//wYAAAAAAAEAAAAAAAYAAAAAAAEAAAABAAYAAAAAAAEAAAACAAYAAAAAAAEAAAADAAYAAAAAAAEAAAAEAAYAAAAAAAEAAAAFAAYAAAAAAAEAAAAGAAYAAAAAAAEAAAAHAAYAAAAAAAEAAAAIAAYAAAAAAAEAAAAJAAYAAAAAAAEAAAAKAAYAAAAAAAEAAAALAAYAAAAAAAEAAAAMAAYAAAAAAAEAAAANAAYAAAAAAAEAAAAOAAYAAAAAAAEAAAAPAAYAAAAAAAEAAAAQAAYAAAAAAAEAAAARAAYAAAAAAAEAAAASAAYAAAAAAAEAAAATAAYAAAAAAAEAAAD4/wcAAAAAAAEAAAD5/wcAAAAAAAEAAAD6/wcAAAAAAAEAAAD7/wcAAAAAAAEAAAD8/wcAAAAAAAEAAAD9/wcAAAAAAAEAAAD+/wcAAAAAAAEAAAD//wcAAAAAAAEAAAAAAAcAAAAAAAEAAAABAAcAAAAAAAEAAAACAAcAAAAAAAEAAAADAAcAAAAAAAEAAAAEAAcAAAAAAAEAAAAFAAcAAAAAAAEAAAAGAAcAAAAAAAEAAAAHAAcAAAAAAAEAAAAIAAcAAAAAAAEAAAAJAAcAAAAAAAEAAAAKAAcAAAAAAAEAAAALAAcAAAAAAAEAAAAMAAcAAAAAAAEAAAANAAcAAAAAAAEAAAAOAAcAAAAAAAEAAAAPAAcAAAAAAAEAAAATAAcAAAAAAAEAAAASAAcAAAAAAAEAAAARAAcAAAAAAAEAAAAQAAcAAAAAAAEAAAD4/wgAAAAAAAEAAAD5/wgAAAAAAAEAAAD6/wgAAAAAAAEAAAD7/wgAAAAAAAEAAAD8/wgAAAAAAAEAAAD9/wgAAAAAAAEAAAD+/wkAAAAAAAEAAAD//wkAAAAAAAEAAAAAAAkAAAAAAAEAAAABAAkAAAAAAAEAAAACAAkAAAAAAAEAAAADAAkAAAAAAAEAAAAEAAkAAAAAAAEAAAAFAAkAAAAAAAEAAAAGAAkAAAAAAAEAAAAHAAkAAAAAAAEAAAAIAAkAAAAAAAEAAAAJAAkAAAAAAAEAAAAKAAkAAAAAAAEAAAALAAkAAAAAAAEAAAAMAAkAAAAAAAEAAAANAAkAAAAAAAEAAAAOAAkAAAAAAAEAAAAPAAgAAAAAAAEAAAAQAAgAAAAAAAEAAAARAAgAAAAAAAEAAAASAAgAAAAAAAEAAAATAAgAAAAAAAEAAAATAAkAAAAAAAEAAAASAAkAAAAAAAEAAAARAAkAAAAAAAEAAAAQAAkAAAAAAAEAAAAPAAkAAAAAAAEAAAD9/wkAAAAAAAEAAAD8/wkAAAAAAAEAAAD7/wkAAAAAAAEAAAD6/wkAAAAAAAEAAAD5/wkAAAAAAAEAAAD4/wkAAAAAAAEAAAD+/wgAAAAAAAEAAAD//wgAAAAAAAEAAAAAAAgAAAAAAAEAAAABAAgAAAAAAAEAAAACAAgAAAAAAAEAAAADAAgAAAAAAAEAAAAEAAgAAAAAAAEAAAAFAAgAAAAAAAEAAAAGAAgAAAAAAAEAAAAHAAgAAAAAAAEAAAAIAAgAAAAAAAEAAAAJAAgAAAAAAAEAAAAKAAgAAAAAAAEAAAALAAgAAAAAAAEAAAAMAAgAAAAAAAEAAAANAAgAAAAAAAEAAAAOAAgAAAAAAAEAAAD4//3/AAAAAAEAAAD5//3/AAAAAAEAAAD6//3/AAAAAAEAAAD7//3/AAAAAAEAAAD8//3/AAAAAAEAAAD9//3/AAAAAAEAAAD+//3/AAAAAAEAAAD///3/AAAAAAEAAAAAAP3/AAAAAAEAAAABAP3/AAAAAAEAAAACAP3/AAAAAAEAAAADAP3/AAAAAAEAAAAEAP3/AAAAAAEAAAAFAP3/AAAAAAEAAAAGAP3/AAAAAAEAAAAHAP3/AAAAAAEAAAAIAP3/AAAAAAEAAAAJAP3/AAAAAAEAAAAKAP3/AAAAAAEAAAALAP3/AAAAAAEAAAAMAP3/AAAAAAEAAAANAP3/AAAAAAEAAAAOAP3/AAAAAAEAAAAPAP3/AAAAAAEAAAAQAP3/AAAAAAEAAAARAP3/AAAAAAEAAAASAP3/AAAAAAEAAAATAP3/AAAAAAEAAAAUAP3/AAAAAAEAAAAVAP3/AAAAAAEAAAAWAP3/AAAAAAEAAAAXAP3/AAAAAAEAAAAXAP7/AAAAAAEAAAAWAP//AAAAAAEAAAAWAAAAAAAAAAEAAAAWAAEAAAAAAAEAAAAWAAIAAAAAAAAAAAAWAAMAAAAAAAEAAAAWAAQAAAAAAAEAAAAWAAUAAAAAAAEAAAAWAAYAAAAAAAEAAAAWAAcAAAAAAAEAAAAWAAgAAAAAAAEAAAAWAAkAAAAAAAEAAAAXAAkAAAAAAAEAAAAXAAgAAAAAAAEAAAAXAAcAAAAAAAEAAAAXAAYAAAAAAAEAAAAXAAUAAAAAAAEAAAAXAAQAAAAAAAEAAAAXAAMAAAAAAAEAAAAXAAIAAAAAAAAAAAAXAAEAAAAAAAEAAAAXAAAAAAAAAAEAAAAXAP//AAAAAAEAAAAWAP7/AAAAAAEAAAAVAP7/AAAAAAEAAAAUAP7/AAAAAAEAAAAUAP//AAAAAAEAAAAUAAAAAAAAAAEAAAAUAAEAAAAAAAEAAAAUAAIAAAAAAAAAAAAUAAMAAAAAAAEAAAAUAAQAAAAAAAEAAAAUAAgAAAAAAAEAAAAUAAkAAAAAAAEAAAAVAAkAAAAAAAEAAAAVAAgAAAAAAAEAAAAVAAcAAAAAAAEAAAAVAAYAAAAAAAEAAAAVAAUAAAAAAAEAAAAVAAQAAAAAAAEAAAAVAAMAAAAAAAEAAAAVAAIAAAAAAAAAAAAVAAEAAAAAAAEAAAAVAAAAAAAAAAEAAAAVAP//AAAAAAEAAAAUAAUAAAAAAAEAAAAUAAYAAAAAAAEAAAAUAAcAAAAAAAEAAAAYAAMAAAAAAAEAAAAYAAQAAAAAAAEAAAAYAAUAAAAAAAEAAAAYAAYAAAAAAAEAAAAYAAcAAAAAAAEAAAAYAAgAAAAAAAEAAAAYAAkAAAAAAAEAAAAZAAkAAAAAAAEAAAAZAAgAAAAAAAEAAAAZAAcAAAAAAAAAAAAZAAYAAAAAAAAAAAAZAAUAAAAAAAAAAAAZAAQAAAAAAAAAAAAZAAMAAAAAAAAAAAAaAAMAAAAAAAEAAAAaAAQAAAAAAAEAAAAaAAUAAAAAAAEAAAAaAAYAAAAAAAEAAAAaAAcAAAAAAAAAAAAaAAgAAAAAAAEAAAAaAAkAAAAAAAEAAAAbAAkAAAAAAAEAAAAbAAgAAAAAAAEAAAAbAAcAAAAAAAAAAAAbAAYAAAAAAAEAAAAbAAUAAAAAAAEAAAAbAAQAAAAAAAEAAAAbAAMAAAAAAAEAAAAYAAIAAAAAAAAAAAAZAAIAAAAAAAAAAAAaAP7/AAAAAAEAAAAbAP7/AAAAAAEAAAAZAAAAAAAAAAEAAAAZAP//AAAAAAEAAAAZAP7/AAAAAAEAAAAaAAIAAAAAAAEAAAAbAAIAAAAAAAEAAAAbAAEAAAAAAAEAAAAbAAAAAAAAAAEAAAAbAP//AAAAAAEAAAAaAP//AAAAAAEAAAAaAAAAAAAAAAEAAAAaAAEAAAAAAAEAAAAYAAEAAAAAAAEAAAAYAAAAAAAAAAEAAAAYAP//AAAAAAEAAAAYAP7/AAAAAAEAAAAYAP3/AAAAAAEAAAAZAP3/AAAAAAEAAAAaAP3/AAAAAAEAAAAbAP3/AAAAAAEAAAAZAAEAAAAAAAEAAAA=")
+tile_set = SubResource("TileSet_4mhsf")
+
+[node name="Sign" type="Sprite2D" parent="." unique_id=1850172557]
+position = Vector2(2801, 187.00002)
+scale = Vector2(0.14092956, 0.12461654)
+texture = ExtResource("10_asd4u")
+
+[node name="Player" parent="." unique_id=1819020577 instance=ExtResource("2_rv6uj")]
+position = Vector2(-264.99994, 305.00003)
+
+[node name="Boundary" type="StaticBody2D" parent="." unique_id=1219760093]
+position = Vector2(2, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary" unique_id=471071397]
+position = Vector2(-480, 317)
+shape = SubResource("RectangleShape2D_rv6uj")
+
+[node name="Area2D" type="Area2D" parent="Boundary" unique_id=132376945]
+script = ExtResource("3_wnea0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boundary/Area2D" unique_id=407544449]
+position = Vector2(3074, 317)
+shape = SubResource("RectangleShape2D_rv6uj")
+
+[node name="Pohon" type="Sprite2D" parent="." unique_id=738467409]
+position = Vector2(-548.99994, 171)
+scale = Vector2(2.40625, 2.546875)
+texture = ExtResource("3_xamxr")
+
+[node name="Pohon" type="Sprite2D" parent="Pohon" unique_id=2115164145]
+position = Vector2(365.29868, -39.2638)
+scale = Vector2(0.6446835, 0.7028855)
+texture = ExtResource("4_cnk32")
+
+[node name="Pohon" type="Sprite2D" parent="Pohon/Pohon" unique_id=1223311955]
+position = Vector2(-16.115814, 27.371819)
+scale = Vector2(0.6446835, 0.7028855)
+texture = ExtResource("4_cnk32")
+
+[node name="Pohon2" type="Sprite2D" parent="Pohon" unique_id=903392257]
+position = Vector2(383.1797, -1.8850394)
+scale = Vector2(0.3764537, 0.28956473)
+texture = ExtResource("5_3bmrq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pohon" unique_id=1218039867]
+position = Vector2(163.32466, 16.098175)
+scale = Vector2(0.983253, 0.9422363)
+texture = ExtResource("6_oey0f")
+
+[node name="Pohon3" type="Sprite2D" parent="Pohon" unique_id=627404127]
+position = Vector2(133.9675, 230.19785)
+scale = Vector2(0.7355925, 0.6047257)
+texture = ExtResource("3_xamxr")
+
+[node name="Pohon4" type="Sprite2D" parent="Pohon" unique_id=709881082]
+position = Vector2(112.20774, 102.0859)
+scale = Vector2(0.4383507, 0.3960104)
+texture = ExtResource("4_cnk32")
+
+[node name="pohon" type="Sprite2D" parent="Pohon" unique_id=1564761220]
+position = Vector2(332.88312, 97.37423)
+scale = Vector2(1.2806576, 1.1575352)
+texture = ExtResource("6_oey0f")
+
+[node name="Pohon5" type="Sprite2D" parent="Pohon" unique_id=1729293442]
+position = Vector2(360.72726, 107.190216)
+scale = Vector2(0.7431673, 0.66195196)
+texture = ExtResource("4_cnk32")
+
+[node name="Pohon5" type="Sprite2D" parent="Pohon/Pohon5" unique_id=1486102486]
+position = Vector2(-372.99112, -320.89517)
+scale = Vector2(0.7431673, 0.66195196)
+texture = ExtResource("4_cnk32")
+
+[node name="Pohon5" type="Sprite2D" parent="Pohon/Pohon5/Pohon5" unique_id=1381611532]
+position = Vector2(55.68235, 34.946487)
+scale = Vector2(1.0299903, 1.1990386)
+texture = ExtResource("4_cnk32")
+
+[node name="Pohon5" type="Sprite2D" parent="Pohon/Pohon5/Pohon5/Pohon5" unique_id=1422608422]
+position = Vector2(-11.688889, -97.89882)
+scale = Vector2(1.0984075, 1.3396133)
+texture = ExtResource("4_cnk32")
+
+[node name="Pohon6" type="Sprite2D" parent="Pohon" unique_id=1223266207]
+position = Vector2(425.8181, 259.6525)
+scale = Vector2(0.39853874, 0.36381915)
+texture = ExtResource("5_3bmrq")
+
+[node name="pohon2" type="Sprite2D" parent="Pohon" unique_id=501031824]
+position = Vector2(466.70123, 250.11046)
+scale = Vector2(1.042787, 0.80546105)
+texture = ExtResource("6_oey0f")
+
+[node name="pohon2" type="Sprite2D" parent="Pohon/pohon2" unique_id=1638043511]
+position = Vector2(551.9674, -192.06319)
+scale = Vector2(1.042787, 0.80546105)
+texture = ExtResource("6_oey0f")
+
+[node name="Pohon8" type="Sprite2D" parent="Pohon" unique_id=970750762]
+position = Vector2(522.8051, 8.638031)
+scale = Vector2(0.5739, 0.62442887)
+texture = ExtResource("3_xamxr")
+
+[node name="Pohon7" type="Sprite2D" parent="Pohon/Pohon8" unique_id=718917264]
+position = Vector2(-651.00256, 365.95895)
+scale = Vector2(1.1368651, 1.338297)
+texture = ExtResource("3_xamxr")
+
+[node name="Pohon7" type="Sprite2D" parent="Pohon" unique_id=1220582111]
+position = Vector2(536.5194, -15.312881)
+scale = Vector2(0.75756186, 0.7902081)
+texture = ExtResource("3_xamxr")
+
+[node name="Pohon9" type="Sprite2D" parent="Pohon" unique_id=1987431621]
+position = Vector2(509.09082, 140.95706)
+scale = Vector2(0.93630046, 1.1036254)
+texture = ExtResource("3_xamxr")
+
+[node name="Pohon10" type="Sprite2D" parent="Pohon" unique_id=925162038]
+position = Vector2(488.72723, 123.68098)
+scale = Vector2(1.159427, 1.0736197)
+texture = ExtResource("3_xamxr")
+
+[node name="Pohon10" type="Sprite2D" parent="Pohon/Pohon10" unique_id=2143753579]
+position = Vector2(610.7809, -17.919975)
+scale = Vector2(1.159427, 1.0736197)
+texture = ExtResource("3_xamxr")
+
+[node name="Kayu" type="Sprite2D" parent="Pohon" unique_id=312064162]
+position = Vector2(738.4934, 152.34357)
+scale = Vector2(0.50974023, 0.5153374)
+texture = ExtResource("7_oey0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pohon/Kayu" unique_id=1681855291]
+position = Vector2(1002.8026, -104.38095)
+scale = Vector2(0.7420387, 0.7380953)
+texture = ExtResource("8_asd4u")
+
+[node name="pohon2" type="Sprite2D" parent="Pohon/Kayu" unique_id=1819573727]
+position = Vector2(1045.1975, -323.8095)
+scale = Vector2(2.9744098, 2.6138012)
+texture = ExtResource("6_oey0f")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Pohon/Kayu" unique_id=1751755343]
+position = Vector2(1015.9491, -309.14288)
+scale = Vector2(1.297771, 1.2648805)
+texture = ExtResource("9_wnea0")
+
+[node name="Pohon8" type="Sprite2D" parent="Pohon/Kayu" unique_id=586507127]
+position = Vector2(1408.8152, -134.09521)
+scale = Vector2(1.4555533, 1.2275963)
+texture = ExtResource("4_cnk32")
+
+[node name="Pohon9" type="Sprite2D" parent="Pohon/Kayu" unique_id=620803751]
+position = Vector2(1394.9553, -426.6667)
+scale = Vector2(1.4555533, 1.2275963)
+texture = ExtResource("4_cnk32")
+
+[node name="Pohon11" type="Sprite2D" parent="Pohon" unique_id=388248503]
+position = Vector2(379.96823, -82.55757)
+scale = Vector2(0.26792037, 0.27597958)
+texture = ExtResource("4_cnk32")
+
+[node name="Pohon7" type="Sprite2D" parent="Pohon/Pohon11" unique_id=1175353051]
+position = Vector2(886.79395, 1279.3887)
+scale = Vector2(1.7128934, 1.3676175)
+texture = ExtResource("4_cnk32")
+
+[node name="Pohon" type="Sprite2D" parent="Pohon/Pohon11" unique_id=653256723]
+position = Vector2(843.3617, 1243.8209)
+scale = Vector2(0.6446835, 0.7028855)
+texture = ExtResource("4_cnk32")
+
+[node name="Pohon5" type="Sprite2D" parent="Pohon/Pohon11" unique_id=994800869]
+position = Vector2(1313.7961, 284.4649)
+scale = Vector2(1.2913628, 1.2600399)
+texture = ExtResource("4_cnk32")
+
+[node name="Pohon5" type="Sprite2D" parent="Pohon/Pohon11/Pohon5" unique_id=818606812]
+position = Vector2(-22.443005, 56.575012)
+scale = Vector2(1.5277938, 1.3798109)
+texture = ExtResource("4_cnk32")
+
+[node name="pohon2" type="Sprite2D" parent="Pohon/Pohon11" unique_id=1783374928]
+position = Vector2(934.87946, 902.3714)
+scale = Vector2(3.6516933, 3.3714657)
+texture = ExtResource("6_oey0f")
+
+[node name="Pohon6" type="Sprite2D" parent="Pohon/Pohon11" unique_id=2096565863]
+position = Vector2(1172.2053, 284.9167)
+scale = Vector2(1.0846698, 1.047962)
+texture = ExtResource("5_3bmrq")
+
+[node name="Pohon8" type="Sprite2D" parent="Pohon/Pohon11" unique_id=1960393551]
+position = Vector2(1280.7856, 777.1732)
+scale = Vector2(1.822685, 1.7075297)
+texture = ExtResource("4_cnk32")
+
+[node name="Pohon9" type="Sprite2D" parent="Pohon/Pohon11" unique_id=1662200037]
+position = Vector2(1782.5863, 896.3408)
+scale = Vector2(2.4599626, 1.6174657)
+texture = ExtResource("4_cnk32")
+
+[node name="Pohon10" type="Sprite2D" parent="Pohon/Pohon11" unique_id=1103958442]
+position = Vector2(1859.3641, 936.5164)
+scale = Vector2(3.4030304, 2.7971232)
+texture = ExtResource("3_xamxr")
+
+[node name="Pohon10" type="Sprite2D" parent="Pohon/Pohon11/Pohon10" unique_id=28198366]
+position = Vector2(28.384995, -27.209011)
+scale = Vector2(1.2211069, 1.3112293)
+texture = ExtResource("3_xamxr")
+
+[node name="Pohon10" type="Sprite2D" parent="Pohon/Pohon11/Pohon10/Pohon10" unique_id=922692085]
+position = Vector2(123.45349, -167.38306)
+scale = Vector2(1.2211069, 1.3112293)
+texture = ExtResource("3_xamxr")
+
+[node name="Pohon11" type="Sprite2D" parent="Pohon/Pohon11/Pohon10" unique_id=39510272]
+position = Vector2(28.384995, -27.209011)
+scale = Vector2(1.2211069, 1.3112293)
+texture = ExtResource("3_xamxr")
+
+[node name="Pohon10" type="Sprite2D" parent="Pohon/Pohon11/Pohon10/Pohon11" unique_id=738409899]
+position = Vector2(123.45349, -167.38306)
+scale = Vector2(1.2211069, 1.3112293)
+texture = ExtResource("3_xamxr")
+metadata/_edit_lock_ = true
+
+[node name="Pohon10" type="Sprite2D" parent="Pohon/Pohon11/Pohon10/Pohon11/Pohon10" unique_id=651276880]
+position = Vector2(14.67308, 14.495813)
+scale = Vector2(0.6630939, 0.6047687)
+texture = ExtResource("3_xamxr")
+
+[node name="Pohon11" type="Sprite2D" parent="Pohon/Pohon11" unique_id=314955994]
+position = Vector2(2431.7378, 353.20654)
+scale = Vector2(0.9263718, 0.92660797)
+texture = ExtResource("5_3bmrq")
+
+[node name="Pistol" type="Area2D" parent="." unique_id=1397579987]
+script = ExtResource("12_7y2jr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pistol" unique_id=38854140]
+position = Vector2(594, 707)
+scale = Vector2(0.041169055, 0.039006107)
+texture = ExtResource("13_vluem")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pistol" unique_id=1387743009]
+position = Vector2(594.41486, 706.71136)
+shape = SubResource("RectangleShape2D_7y2jr")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=528170798]
+script = ExtResource("14_l2wtb")
+
+[node name="InventoryPanel" type="Panel" parent="UI" unique_id=889971376]
+visible = false
+offset_left = 452.0
+offset_top = 257.0
+offset_right = 676.0
+offset_bottom = 395.0
+
+[node name="InventoryText" type="Label" parent="UI/InventoryPanel" unique_id=979725224]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="body_entered" from="Boundary/Area2D" to="Boundary/Area2D" method="_on_exit_zone_body_entered"]
+[connection signal="body_entered" from="Pistol" to="Pistol" method="_on_body_entered"]

@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://dfrs02bbo6uuc"]
+
+[ext_resource type="Texture2D" uid="uid://dgg0nyoynlfal" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - House.png" id="1_i224w"]
+[ext_resource type="Texture2D" uid="uid://qc72e2ch82je" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Watchtower Short.png" id="2_5ewn4"]
+[ext_resource type="Texture2D" uid="uid://c0jri2fnxtn7e" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_prop - Tree Large.png" id="3_5sy1h"]
+[ext_resource type="Texture2D" uid="uid://cjtpgk111u2rc" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Tree Small.png" id="4_ljy1d"]
+[ext_resource type="Texture2D" uid="uid://uuctct06kag5" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Bushes Large.png" id="5_v3upk"]
+[ext_resource type="Texture2D" uid="uid://ckqktjj3qbex5" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Tree Stump Tall.png" id="6_gyhwi"]
+[ext_resource type="Texture2D" uid="uid://cf6igows6r7yt" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Wooden Barrel.png" id="7_xrnul"]
+[ext_resource type="Texture2D" uid="uid://bmjm76sagy3di" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Well.png" id="8_fed7n"]
+[ext_resource type="Texture2D" uid="uid://cpisouge5wym2" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Castle Round.png" id="9_1yd1m"]
+[ext_resource type="Texture2D" uid="uid://xymevmdjlmth" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Flag.png" id="10_521oe"]
+[ext_resource type="Texture2D" uid="uid://cub51gre0qnpe" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Windmill.png" id="11_4b8h1"]
+[ext_resource type="Texture2D" uid="uid://witx4vw3y5d8" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Wooden Fence Vertical.png" id="12_l3k6y"]
+[ext_resource type="Texture2D" uid="uid://cdmxfl0o8nvk7" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Tree Medium.png" id="13_8rcb2"]
+[ext_resource type="Texture2D" uid="uid://cok4lj4ulxd7q" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Tent.png" id="14_5sy1h"]
+[ext_resource type="Texture2D" uid="uid://bmcf8wvhmsiby" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Wooden Cart.png" id="15_ljy1d"]
+
+[node name="Level1_Env" type="Area2D" unique_id=1271987839]
+
+[node name="Rumah" type="Sprite2D" parent="." unique_id=117562347]
+position = Vector2(480, 869.00006)
+scale = Vector2(0.49791667, 0.4640625)
+texture = ExtResource("1_i224w")
+
+[node name="Rumah" type="Sprite2D" parent="Rumah" unique_id=1861941008]
+position = Vector2(3588.9539, 36.63282)
+scale = Vector2(0.82740825, 0.86517364)
+texture = ExtResource("1_i224w")
+
+[node name="Watchtower" type="Sprite2D" parent="." unique_id=1877447728]
+position = Vector2(904.00006, 937)
+scale = Vector2(0.67083335, 0.77307695)
+texture = ExtResource("2_5ewn4")
+
+[node name="Tree3s" type="Sprite2D" parent="." unique_id=1214610029]
+position = Vector2(743.00006, 2227)
+scale = Vector2(0.6475, 0.6041667)
+texture = ExtResource("3_5sy1h")
+
+[node name="Tree3s3" type="Sprite2D" parent="Tree3s" unique_id=1742353979]
+position = Vector2(129.04883, -1732.9994)
+scale = Vector2(0.66567856, 0.8644051)
+texture = ExtResource("3_5sy1h")
+
+[node name="Tree3s2" type="Sprite2D" parent="Tree3s" unique_id=1103858286]
+position = Vector2(612.41235, -1340.112)
+scale = Vector2(0.8375503, 0.9769039)
+texture = ExtResource("3_5sy1h")
+
+[node name="Tree3s2" type="Sprite2D" parent="Tree3s/Tree3s2" unique_id=1394673140]
+position = Vector2(935.73645, -1181.521)
+scale = Vector2(0.86132365, 0.8732002)
+texture = ExtResource("3_5sy1h")
+
+[node name="Tree3s" type="Sprite2D" parent="Tree3s" unique_id=1266200692]
+position = Vector2(603.86096, -554.48285)
+scale = Vector2(0.79479235, 0.8848414)
+texture = ExtResource("3_5sy1h")
+
+[node name="Tree3s" type="Sprite2D" parent="Tree3s/Tree3s" unique_id=1505090361]
+position = Vector2(1801.3011, -1844.3984)
+scale = Vector2(0.79479235, 0.8848414)
+texture = ExtResource("3_5sy1h")
+
+[node name="Tree1s" type="Sprite2D" parent="." unique_id=32211776]
+position = Vector2(814.00006, 1660.0001)
+scale = Vector2(0.775, 0.80714285)
+texture = ExtResource("4_ljy1d")
+
+[node name="Tree2s" type="Sprite2D" parent="Tree1s" unique_id=1585689897]
+position = Vector2(-116.12923, -941.5931)
+scale = Vector2(0.9090053, 0.9389693)
+texture = ExtResource("4_ljy1d")
+
+[node name="Semak" type="Sprite2D" parent="Tree1s" unique_id=19391109]
+position = Vector2(-199.99994, -844.95605)
+scale = Vector2(0.7553764, 0.8584076)
+texture = ExtResource("5_v3upk")
+
+[node name="TreeStump" type="Sprite2D" parent="." unique_id=998548403]
+position = Vector2(1502.5, 708.5)
+scale = Vector2(0.75625, 0.89285713)
+texture = ExtResource("6_gyhwi")
+
+[node name="Barrel" type="Sprite2D" parent="." unique_id=853900818]
+position = Vector2(355, 984)
+scale = Vector2(0.68333334, 0.62142855)
+texture = ExtResource("7_xrnul")
+
+[node name="Prop" type="Sprite2D" parent="." unique_id=1158640159]
+position = Vector2(988, 325)
+scale = Vector2(0.805, 0.825)
+texture = ExtResource("8_fed7n")
+
+[node name="Kincir" type="Sprite2D" parent="." unique_id=833864336]
+position = Vector2(1613.0001, 22)
+scale = Vector2(0.5833333, 0.6388889)
+texture = ExtResource("11_4b8h1")
+
+[node name="Tree2s" type="Sprite2D" parent="." unique_id=2139282471]
+position = Vector2(1341, 132)
+scale = Vector2(0.41111112, 0.46)
+texture = ExtResource("13_8rcb2")
+
+[node name="Castle" type="Sprite2D" parent="." unique_id=1606586263]
+position = Vector2(1372, 1091.5)
+scale = Vector2(0.68125015, 0.58125)
+texture = ExtResource("9_1yd1m")
+
+[node name="Flag" type="Sprite2D" parent="Castle" unique_id=1225934216]
+position = Vector2(206.97244, -247.74197)
+scale = Vector2(1.4678895, 1.72043)
+texture = ExtResource("10_521oe")
+
+[node name="Fence" type="Sprite2D" parent="." unique_id=1406972157]
+position = Vector2(1498, 1126.5)
+texture = ExtResource("12_l3k6y")
+
+[node name="robber_tent" type="Sprite2D" parent="." unique_id=813301796]
+position = Vector2(413, 426)
+scale = Vector2(0.79, 0.80714285)
+texture = ExtResource("14_5sy1h")
+
+[node name="rober_wagon" type="Sprite2D" parent="robber_tent" unique_id=135481914]
+position = Vector2(251.26578, -100.35396)
+scale = Vector2(0.5735758, 0.573009)
+texture = ExtResource("15_ljy1d")

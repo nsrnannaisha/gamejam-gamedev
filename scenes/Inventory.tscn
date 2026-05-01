@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://coxo6o6xwfnim"]
+
+[ext_resource type="Script" uid="uid://3fqhij02bove" path="res://scripts/InventoryUI.gd" id="1_kh8if"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=2028003420]
+
+[node name="InventoryUI" type="Control" parent="." unique_id=2141250843]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_kh8if")
+
+[node name="TextureRect" type="TextureRect" parent="InventoryUI" unique_id=71554830]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="InventoryUI" unique_id=475904006]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="InventoryUI" unique_id=1698707547]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 5
