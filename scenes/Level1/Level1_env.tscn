@@ -39,7 +39,7 @@ scale = Vector2(0.6475, 0.6041667)
 texture = ExtResource("3_5sy1h")
 
 [node name="Tree3s3" type="Sprite2D" parent="Tree3s" unique_id=1742353979]
-position = Vector2(129.04883, -1732.9994)
+position = Vector2(129.04883, -1617.1372)
 scale = Vector2(0.66567856, 0.8644051)
 texture = ExtResource("3_5sy1h")
 

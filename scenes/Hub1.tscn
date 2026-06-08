@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c55jjg2x8aop1" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Castle Square.png" id="4_casm1"]
 [ext_resource type="Texture2D" uid="uid://w5ntuyfw3vqn" path="res://assets/ui/bubble.png" id="5_3f0fq"]
 [ext_resource type="Texture2D" uid="uid://05uahh7wri5x" path="res://assets/ui/bottle.png" id="6_5nj7h"]
+[ext_resource type="Texture2D" uid="uid://ionvpg06x3y4" path="res://assets/ui/next.png" id="8_geaph"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ect7k"]
 texture = ExtResource("1_6nn2o")
@@ -130,3 +131,29 @@ position = Vector2(12.789215, -5.104149)
 rotation = 0.6667158
 scale = Vector2(0.2998065, 0.25416788)
 texture = ExtResource("6_5nj7h")
+
+[node name="NextButton" type="Button" parent="." unique_id=1777732529]
+offset_left = 993.0
+offset_top = 559.0
+offset_right = 1222.0
+offset_bottom = 737.0
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0.07, 0.07, 0.07, 1)
+theme_override_font_sizes/font_size = 28
+icon = ExtResource("8_geaph")
+flat = true
+
+[node name="SkipButton" type="Button" parent="." unique_id=1639517001]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("3_geaph")
+theme_override_font_sizes/font_size = 16
+text = "SKIP"
+
+[connection signal="pressed" from="NextButton" to="." method="go_next"]
+[connection signal="pressed" from="SkipButton" to="." method="go_skip"]

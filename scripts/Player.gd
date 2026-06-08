@@ -138,6 +138,8 @@ func take_damage():
 
 	var sisa = 3 - Inventory.death_count
 	UiHealth.update_health(sisa)
+	
+	shake_camera()
 
 	await tree.create_timer(0.2).timeout
 
@@ -161,3 +163,18 @@ func start_fade_and_change_scene():
 	await tween.finished
 
 	get_tree().change_scene_to_file("res://scenes/Level1/Level1.tscn")
+
+func shake_camera():
+	if not has_node("Camera2D"):
+		return
+	var camera = $Camera2D
+	var shake_tween = create_tween()
+	var original_offset = camera.offset
+	
+	# Bikin layar bergetar 5 kali ke arah acak
+	for i in range(5):
+		var random_offset = Vector2(randf_range(-10, 10), randf_range(-10, 10))
+		shake_tween.tween_property(camera, "offset", original_offset + random_offset, 0.04)
+	
+	# Kembalikan ke posisi semula
+	shake_tween.tween_property(camera, "offset", original_offset, 0.04)
