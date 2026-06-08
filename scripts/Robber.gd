@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed := 120
-@export var attack_range := 60.0
+@export var attack_range := 80.0
 
 @onready var agent: NavigationAgent2D = $NavigationAgent2D
 @onready var anim := $AnimatedSprite2D
@@ -13,15 +13,14 @@ var can_attack := true
 
 func _ready():
 	player = get_tree().get_first_node_in_group("player")
-	agent.path_desired_distance = 10.0
-	agent.target_desired_distance = 10.0
+	agent.path_desired_distance = 40.0
+	agent.target_desired_distance = 40.0
 
 func _physics_process(delta):
 	if player == null or is_dead:
 		return
 
 	var distance = global_position.distance_to(player.global_position)
-	var stop_range = attack_range + 10.0
 
 	if is_chasing:
 		if distance <= attack_range:
@@ -30,19 +29,22 @@ func _physics_process(delta):
 			if can_attack:
 				attack_player()
 
-		elif distance <= stop_range:
-			velocity = Vector2.ZERO
-
 		else:
-			if agent.target_position.distance_to(player.global_position) > 5:
-				agent.target_position = player.global_position
-
-			if not agent.is_navigation_finished():
-				var next_pos = agent.get_next_path_position()
-				var direction = (next_pos - global_position).normalized()
-				velocity = direction * speed
+			if distance < 120.0:
+				velocity = (player.global_position - global_position).normalized() * speed
 			else:
-				velocity = Vector2.ZERO
+				if agent.target_position.distance_to(player.global_position) > 5:
+					agent.target_position = player.global_position
+
+				if not agent.is_navigation_finished():
+					var next_pos = agent.get_next_path_position()
+					var direction = (next_pos - global_position).normalized()
+					velocity = direction * speed
+				else:
+					if distance > attack_range:
+						velocity = (player.global_position - global_position).normalized() * speed
+					else:
+						velocity = Vector2.ZERO
 	else:
 		velocity = Vector2.ZERO
 

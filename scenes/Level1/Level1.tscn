@@ -157,9 +157,9 @@ size = Vector2(106, 196)
 size = Vector2(40.406494, 104.12497)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_uf5wj"]
-vertices = PackedVector2Array(629.1328, -558.4922, 323.1875, -445, -1159.8438, -445, -1155.1484, -745.02344, 507.9922, -750.02344, 765.6719, -714.53125, 816.03125, -986.4922, 569.4531, -1021.47656, 697.0469, -1261.9688, 977.4219, -1074.9922, 971.7969, -1365, 4290, -1365, 4290, -1084.9609)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 5, 4, 7, 8), PackedInt32Array(9, 6, 8, 10), PackedInt32Array(9, 10, 11, 12)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-1164.9998, -755.00024, 500, -760.00024, 560, -1025.0001, 690, -1270.0001, 970, -1375.0001, 4299.9995, -1375.0001, 4299.9995, -1075.0001, 980, -1065.0001, 825, -980.0001, 775, -710.00024, 635, -550.00024, 325, -435.00024, -1169.9998, -435.00024)])
+vertices = PackedVector2Array(1051.4688, -1420, 4309.867, -1420, 4305.117, -1055.0469, 975.27344, -1075.0313, 656.59375, -1301.5313, 518.59375, -1069.8828, 860.7578, -934.4922, 385.72656, -839.9375, 595.2422, -459.21875, 309.14844, -400.03125, -1159.8438, -444.70313, -1155.1406, -745.8594, -74.578125, -844.9922, 795.90625, -645.21094)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 4, 3, 6, 7), PackedInt32Array(8, 9, 10, 11, 12, 7, 13), PackedInt32Array(6, 13, 7)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-1164.9998, -755.00024, -75, -855.00024, 380, -850.00024, 510, -1075.0001, 650, -1310.0001, 1050, -1430.0001, 4319.9995, -1430.0001, 4314.9995, -1045.0001, 980, -1065.0001, 870, -930.0001, 805, -640.00024, 600, -450.00024, 310, -390.00024, -1169.9998, -435.00024)])
 
 [node name="Level1" type="Node2D" unique_id=1383079499]
 script = ExtResource("1_x1okc")
@@ -171,7 +171,7 @@ tile_set = SubResource("TileSet_88hil")
 [node name="Level1_Env" parent="." unique_id=1271987839 instance=ExtResource("2_28xb8")]
 
 [node name="Player" parent="." unique_id=1819020577 instance=ExtResource("2_ewoou")]
-position = Vector2(2970, 187)
+position = Vector2(956.99994, 2087)
 
 [node name="Area_Robber" type="Area2D" parent="." unique_id=824043767]
 script = ExtResource("7_uf5wj")
