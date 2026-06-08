@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://cmwg3h72f04g0" path="res://assets/font/subtitle/MotionControl-Bold.otf" id="3_yn2hb"]
 [ext_resource type="Texture2D" uid="uid://c55jjg2x8aop1" path="res://assets/tilemap/simple-summer/PNG/Top-Down Simple Summer_Prop - Castle Square.png" id="4_fmjps"]
 [ext_resource type="PackedScene" uid="uid://dom0ukb310g1e" path="res://scenes/HubPlayer.tscn" id="6_yn2hb"]
+[ext_resource type="Texture2D" uid="uid://ionvpg06x3y4" path="res://assets/ui/next.png" id="7_6t713"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ect7k"]
 texture = ExtResource("1_0l5qy")
@@ -80,7 +81,7 @@ tile_size = Vector2i(128, 128)
 sources/0 = SubResource("TileSetAtlasSource_ect7k")
 sources/1 = SubResource("TileSetAtlasSource_v5koy")
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=1315417392]
+[node name="CanvasLayer3" type="CanvasLayer" unique_id=1315417392]
 script = ExtResource("1_6t713")
 next_scene = "res://scenes/Hub3.tscn"
 
@@ -122,3 +123,30 @@ texture = ExtResource("4_fmjps")
 
 [node name="Player" parent="." unique_id=1819020577 instance=ExtResource("6_yn2hb")]
 position = Vector2(48.000244, 404)
+patrol = false
+
+[node name="SkipButton" type="Button" parent="." unique_id=1850882099]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("3_yn2hb")
+theme_override_font_sizes/font_size = 16
+text = "SKIP"
+
+[node name="NextButton" type="Button" parent="." unique_id=2031731408]
+offset_left = 993.0
+offset_top = 559.0
+offset_right = 1222.0
+offset_bottom = 737.0
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0.07, 0.07, 0.07, 1)
+theme_override_font_sizes/font_size = 28
+icon = ExtResource("7_6t713")
+flat = true
+
+[connection signal="pressed" from="SkipButton" to="." method="go_skip"]
+[connection signal="pressed" from="NextButton" to="." method="go_next"]

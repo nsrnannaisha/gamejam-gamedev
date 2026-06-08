@@ -5,8 +5,9 @@ extends CharacterBody2D
 @onready var animplayer := $AnimatedSprite2D
 
 var direction := 1
-var left_limit := 100
-var right_limit := 500
+@export var left_limit := 100.0
+@export var right_limit := 500.0
+@export var patrol := true
 
 func _physics_process(delta):
 	auto_move()
@@ -17,10 +18,11 @@ func auto_move():
 	velocity.x = speed * direction
 	velocity.y = 0
 
-	if global_position.x > right_limit:
-		direction = -1
-	elif global_position.x < left_limit:
-		direction = 1
+	if patrol:
+		if global_position.x > right_limit:
+			direction = -1
+		elif global_position.x < left_limit:
+			direction = 1
 
 func update_animation():
 	if velocity.length() > 0:
