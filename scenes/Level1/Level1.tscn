@@ -168,7 +168,7 @@ tile_set = SubResource("TileSet_88hil")
 [node name="Level1_Env" parent="." unique_id=1271987839 instance=ExtResource("2_28xb8")]
 
 [node name="Player" parent="." unique_id=1819020577 instance=ExtResource("2_ewoou")]
-position = Vector2(954.0001, 617)
+position = Vector2(957.99994, 2101)
 
 [node name="Area_Robber" type="Area2D" parent="." unique_id=824043767]
 script = ExtResource("7_uf5wj")
