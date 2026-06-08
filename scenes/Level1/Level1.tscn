@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bltir41oli3xv" path="res://scripts/AreaRobber.gd" id="7_uf5wj"]
 [ext_resource type="Script" uid="uid://dpk2w3qej1ahr" path="res://scripts/WinArea.gd" id="7_xe0gs"]
 [ext_resource type="PackedScene" uid="uid://duunp8rbq7gx6" path="res://scenes/Win.tscn" id="8_xe0gs"]
+[ext_resource type="PackedScene" uid="uid://8tps3i3yc6fm" path="res://scenes/HUD.tscn" id="9_hud"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6csfi"]
 texture = ExtResource("1_jxdae")
@@ -28,9 +29,7 @@ texture_region_size = Vector2i(128, 128)
 3:6/0 = 0
 4:6/0 = 0
 5:5/0 = 0
-5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, 64, 64, -64, 39.042664, -64, 37.09053, -24.401665, 12.688858, 17.569199)
-5:5/0/physics_layer_0/polygon_1/points = PackedVector2Array(-64, 41.97087, 14.640991, 15.617065, 64, 64, -64, 64)
-5:5/0/physics_layer_0/polygon_2/points = PackedVector2Array(-47.82727, -46.851196, -40.018738, -64, -64, -64, -64, -42.94693)
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(9.760666, 21.473465, 43.923004, -64, 64, -64, 64, 64, -64, 64, -64, 42.946945)
 6:5/0 = 0
 6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-39.04267, -64, -64, -64, -64, 64, 64, 64, 64, 46.85121, -1.9521332, 22.44954, -31.234138, -13.664932)
 7:5/0 = 0
@@ -85,8 +84,7 @@ texture_region_size = Vector2i(128, 128)
 2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-38.066605, 64, -64, 64, -64, 44.89908, -42.946938, 45.875137)
 2:3/0/physics_layer_0/polygon_1/points = PackedVector2Array(-64, -38.066597, 64, -36.114464, 64, -64, -64, -64)
 3:3/0 = 0
-3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, 64, 41.97087, 64, 64, 38.066605)
-3:3/0/physics_layer_0/polygon_1/points = PackedVector2Array(-64, 64, -42.946938, 64, -38.066605, 30.258072, 0, -17.569199, 76.133194, -44.899063, 64, -64, -64, -64)
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 43.923004, -64, 64, -64, 64, -40.01873, -0.9760742, -21.473465, -29.282005, 14.641006, -40.018738, 64, -64, 64, -64, 42.946945)
 4:3/0 = 0
 4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, -45.87513, -64, -44.899063)
 5:2/0 = 0
@@ -155,9 +153,9 @@ size = Vector2(106, 196)
 size = Vector2(40.406494, 104.12497)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_uf5wj"]
-vertices = PackedVector2Array(1051.4688, -1420, 4309.867, -1420, 4305.117, -1055.0469, 975.27344, -1075.0313, 656.59375, -1301.5313, 518.09375, -1069.0469, 860.7578, -934.4922, 309.14844, -400.03125, -1159.8438, -444.70313, -1155.1406, -745.8594, -73.72656, -845.0703, 795.90625, -645.21094, 595.2422, -459.21875, 385.10156, -920.71094)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 4, 3, 6), PackedInt32Array(7, 8, 9, 10), PackedInt32Array(11, 12, 7, 10, 13, 6), PackedInt32Array(5, 6, 13)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-1164.9998, -755.00024, -75, -855.00024, 380, -930.0001, 510, -1075.0001, 650, -1310.0001, 1050, -1430.0001, 4319.9995, -1430.0001, 4314.9995, -1045.0001, 980, -1065.0001, 870, -930.0001, 805, -640.00024, 600, -450.00024, 310, -390.00024, -1169.9998, -435.00024)])
+vertices = PackedVector2Array(1051.4688, -1420, 4309.867, -1420, 4305.117, -1055.0469, 975.27344, -1075.0313, 656.59375, -1301.5313, 516.7969, -1066.8672, 860.7578, -934.4922, 309.14844, -400.03125, -1159.8438, -444.70313, -1155.1406, -745.8594, -72.74219, -845.1719, 795.90625, -645.21094, 595.2422, -459.21875)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 4, 3, 6), PackedInt32Array(7, 8, 9, 10), PackedInt32Array(11, 12, 7, 10, 5, 6)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-1164.9998, -755.00024, -75, -855.00024, 510, -1075.0001, 650, -1310.0001, 1050, -1430.0001, 4319.9995, -1430.0001, 4314.9995, -1045.0001, 980, -1065.0001, 870, -930.0001, 805, -640.00024, 600, -450.00024, 310, -390.00024, -1169.9998, -435.00024)])
 
 [node name="Level1" type="Node2D" unique_id=1383079499]
 script = ExtResource("1_x1okc")
@@ -212,6 +210,8 @@ win_scene = ExtResource("8_xe0gs")
 position = Vector2(3045.7969, 185.93753)
 scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_uf5wj")
+
+[node name="HUD" parent="." unique_id=528170798 instance=ExtResource("9_hud")]
 
 [connection signal="body_entered" from="Area_Robber" to="Area_Robber" method="_on_body_entered"]
 [connection signal="body_entered" from="Area_Robber" to="Area_Robber" method="_on_detect_zone_body_entered"]
